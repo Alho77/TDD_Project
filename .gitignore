@@ -1,2 +1,4 @@
-tdd_rest/__pycache__/__init__.cpython-37.pyc
-tdd_rest/__pycache__/settings.cpython-37.pyc
+tdd_rest/__pycache__/*
+app/migrations/*
+app/__pycache__/*
+db.sqlite3
