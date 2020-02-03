@@ -3,3 +3,5 @@ app/migrations/*
 app/__pycache__/*
 db.sqlite3
 app/tests/__pycache__/*
+app/management/__pycache__/*
+app/management/commands/__pycache__/*
