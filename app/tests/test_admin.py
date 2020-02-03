@@ -11,7 +11,7 @@ class AdminPageTest(TestCase):
         self.client = Client()
         self.admin_user = User.objects.create_superuser(
             email='admin@test.com', password='admin1234')
-        # TODO: check why need username (Err: UNIQUE constraint failed: app_user.username)
+        # FIXME: check why need username (Err: UNIQUE constraint failed: app_user.username)
         self.user = User.objects.create_user(
             email='test@test.com', password='test1234', name='User Test', username='test')
         self.client.force_login(self.admin_user)
