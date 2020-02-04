@@ -5,3 +5,5 @@ db.sqlite3
 app/tests/__pycache__/*
 app/management/__pycache__/*
 app/management/commands/__pycache__/*
+user/__pycache__/*
+user/tests/__pycache__/*
