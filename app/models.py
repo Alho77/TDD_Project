@@ -1,5 +1,6 @@
 from django.contrib.auth.models import (AbstractUser, BaseUserManager,
                                         PermissionsMixin)
+from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.db import models
 
 
@@ -27,6 +28,8 @@ class UserManager(BaseUserManager):
 
 class User(AbstractUser):
     """Custom user model that support email instead of username"""
+    username = models.CharField(blank=True, null=True, error_messages={'unique': 'A user with that username already exists.'},
+                                max_length=150, unique=True, validators=[UnicodeUsernameValidator()], verbose_name='username')
     email = models.EmailField(max_length=100, unique=True)
     name = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
