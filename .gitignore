@@ -8,3 +8,4 @@ app/management/commands/__pycache__/*
 user/__pycache__/*
 user/tests/__pycache__/*
 recipe/__pycache__/*
+recipe/tests/__pycache__/*
